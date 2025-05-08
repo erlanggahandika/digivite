@@ -1,0 +1,12 @@
+PATCH http://localhost:5000/updatemaintance/1
+Content-Type: application/json
+
+{
+    "open" : true
+}
+//maintance == true brrti ditutup
+###
+DELETE http://localhost:5000/deletebntr/2
+
+###
+GET http://localhost:5000/lihatMaintance

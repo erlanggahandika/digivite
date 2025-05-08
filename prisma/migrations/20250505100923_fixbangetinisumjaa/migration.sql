@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `ConnectTele` ADD COLUMN `jam` VARCHAR(191) NULL,
+    ADD COLUMN `menit` VARCHAR(191) NULL;

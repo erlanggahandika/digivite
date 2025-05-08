@@ -1,0 +1,106 @@
+
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name": "agus admin",
+    "role": 1,
+    "email": "user15@gmail.com",
+    "password": "123456"
+}
+
+#### user login role bukan admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "agus02@gmail.com",
+    "password" : "123456"
+}
+
+#### admin pin update
+PATCH http://localhost:5000/pinupdate
+Content-Type: application/json
+
+{
+    "pin" : "123"
+}
+
+#### user login role  admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "123456"
+}
+
+###patch admin
+PATCH http://localhost:5000/patchuseradmin/
+
+### get yg login
+GET http://localhost:5000/getme
+
+### user logout
+POST http://localhost:5000/logout
+
+
+###
+GET http://localhost:5000/getme
+
+###
+GET http://localhost:5000/notification
+
+###
+GET http://localhost:5000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJhZ3VzIiwiZW1haWwiOiJhZ3VzYWJ1bnR1bmdAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzM5NTA1Mjk4LCJleHAiOjE3Mzk1OTE2OTh9.Rkzy-gbDL4ySeqXBr7PPea7u3JHfTgcXQsjRxGzyWAU
+
+###count total user
+GET http://localhost:5000/countuser
+
+
+####//count total admin
+GET http://localhost:5000/countadmin
+
+####//get all
+GET http://localhost:5000/getall
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJhZ3VzIiwiZW1haWwiOiJhZ3VzYWJ1bnR1bmdAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzM5NTQzMDE3LCJleHAiOjE3Mzk2Mjk0MTd9.zHrHK9zRBQ2Jvu8MG4AZL-vVhzrx37Q50g51GTonKZI
+
+///////api katalog casn ////////
+#### user login role  admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "agusabuntung@gmail.com",
+    "password" : "123456"
+}
+
+### ini katalog casn
+GET http://localhost:5000/categorycasn
+
+#### tambah data kategori sampah
+POST http://localhost:5000/categorycasn
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJhZ3VzIiwiZW1haWwiOiJhZ3VzYWJ1bnR1bmdAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzM5NTQzMDQ0LCJleHAiOjE3Mzk2Mjk0NDR9.Da5khXAZr7l4jPaGcR3SIpRCNsjtsCcHK3KMfOWcEms
+
+{
+    "name" : "Matematika",
+    "gambar" : "Pelajari konsep dasar hingga tingkat lanjut dalam matematika.",
+    "deskripsi": "Pelajari konsep dasar hingga tingkat lanjut dalam matematika."
+}
+
+
+### ini hapus kategori
+DELETE  http://localhost:5000/categorycasn/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJhZ3VzIiwiZW1haWwiOiJhZ3VzYWJ1bnR1bmdAZ21haWwuY29tIiwicm9sZSI6MSwiaWF0IjoxNzM5MjAzMzIwLCJleHAiOjE3MzkyODk3MjB9.Z2OwNWK6x8aVCoBcNXwjK0Vzcy8rK5MWxFfatDYnh5M
+
+
+#### tambah data kategori sampah
+PATCH http://localhost:5000/patchuseradmin/
+Content-Type: application/json
+
+{
+    "name": "agus admin",
+    "role": 12
+}

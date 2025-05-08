@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Mentor` ADD COLUMN `Kelas` BOOLEAN NOT NULL DEFAULT false;

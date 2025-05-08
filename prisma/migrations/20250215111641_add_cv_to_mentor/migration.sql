@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Mentor` ADD COLUMN `cv` VARCHAR(191) NULL;
